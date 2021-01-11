@@ -14,10 +14,15 @@ header {
   padding: 1em;
   background-color: #F58300;
   color: #023047;
+  font-size: 1.5em;
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #F58300;
+  font-family: "Saira Condensed", sans-serif;
   height: 3em;
   width: 100%;
   position: fixed;
@@ -25,16 +30,18 @@ footer {
   bottom: 0;
 }
 
-.sectionOne {
-  padding-top: 2em;
+.sectionOne h2 {
+  padding: 1em;
+  font-size: 2em;
 }
 
-main, footer {
+main {
   font-family: "Saira Condensed", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
+  color: #023047;
 }
 
 ol {

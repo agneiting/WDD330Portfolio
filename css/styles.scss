@@ -23,23 +23,31 @@ header {
     padding: 1em;
     background-color: $secondayColor;
     color: $primaryColor;
+    font-size: 1.5em;
 }
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $secondayColor;
+    font-family: $bodyFont;
     height: 3em;
     width: 100%;
     position: fixed;
     left: 0;
     bottom: 0;
+
 }
-.sectionOne {
-    padding-top: 2em;
+.sectionOne h2 {
+    padding: 1em;
+    font-size: 2em;
 }
-main, footer {
+main {
     font-family: $bodyFont;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: $headingFont;
+    color: $primaryColor;
 }
 ol {
     display: flex;
