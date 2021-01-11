@@ -52,6 +52,7 @@ li {
   height: 2em;
   width: 70%;
   box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  font-size: 2em;
 }
 
 a {
@@ -59,7 +60,7 @@ a {
   text-decoration: none;
   width: 100%;
   height: 100%;
-  padding-top: 3px;
+  padding-top: 0.25em;
 }
 
 li:hover {
@@ -74,7 +75,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: #EFF7FB;
+  color: #FFC533;
 }
 
 /* mouse over link */
