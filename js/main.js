@@ -3,7 +3,7 @@ var toc = document.getElementById("toc");
 
 //Create Array
 let contents = [
-    ['W02 Team Activity', 'Team Activities/w02/index.html'],
+    ['W02 Team Activity', 'Team/w02/index.html'],
     ['Exercise 2', 'https://www.facebook.com'],
     ['Exercise 3', 'https://www.youtube.com']
 ];
