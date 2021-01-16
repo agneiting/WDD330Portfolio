@@ -1,35 +1,50 @@
-function myFunction() {
-    //Get user input.
-    let a = document.getElementById('inputA').value;
-    let b = document.getElementById('inputB').value;
+function numberOne() {
+    //Grabbing user input.
+    let val = document.getElementById("number").value;
+    //Makes input an integer, and get sum of numbers.
+    let res = (parseInt(val) * (parseInt(val)+1)) / 2;
+    //Output to div.
+    document.getElementById("outputArea").innerHTML= res;
+}
 
-    //Convert string to number.
-    a = parseInt(a);
-    b = parseInt(b);
+let res = 0;
 
-    //If input is NOT a number, ask the user to enter a valid number.
-    //If inputB does have a number, go to addNumbers().
-    //If the input IS a number, go to addNumber().
-    if(isNaN(a)) {
-        document.getElementById('outputArea').innerHTML = "Please enter a valid number.";
-    } else if(b > 0) {
-        addNumbers(a, b);
+function getInput() {
+    //Grabbing user input.
+    const valOne = document.getElementById("inputA").value;   
+    const valTwo = document.getElementById("inputB").value; 
+    let symbol = document.getElementById("symbol").value;
+
+    //Make input an integer.
+    const valueOne = parseInt(valOne);
+    const valueTwo = parseInt(valTwo); 
+
+    //Choose which function to use based on arithmatic symbol.
+    if(symbol == '+') {
+        add(valueOne, valueTwo);   
+    } else if(symbol == '*') {
+        multiply(valueOne, valueTwo);
+    } else if(symbol == '-') {
+        sub(valueOne, valueTwo);
     } else {
-        addNumber(a);
-    }
+        document.getElementById("outputAreaTwo").innerHTML= 'Sorry, that formula has not been added to our calculator.';    
+    }   
+
+    //Output to div.
+    document.getElementById("outputAreaTwo").innerHTML= res;
 }
 
-//Add numbers within number together.
-function addNumber(x) {
-    let result = 0;
-    for (i=0; i<=x; i++) {
-        result += i;
-    }
-    document.getElementById('outputArea').innerHTML = result;
+function add(x, y) { 
+    //Add two numbers together.
+    res = x + y;
+    return res;
 }
 
-//Add two number together
-function addNumbers(x, y) {
-    let result = x + y;
-    document.getElementById('outputArea').innerHTML = result;
-}
+
+const multiply = function mult(x,y){
+    //Multiply
+    res = x * y;
+    return res;
+};
+
+const sub = (x,y) => res = (x - y);
