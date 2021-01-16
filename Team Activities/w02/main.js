@@ -8,7 +8,8 @@ function myFunction() {
     b = parseInt(b);
 
     //If input is NOT a number, ask the user to enter a valid number.
-    //If the input IS a number, switch to the next function.
+    //If inputB does have a number, go to addNumbers().
+    //If the input IS a number, go to addNumber().
     if(isNaN(a)) {
         document.getElementById('outputArea').innerHTML = "Please enter a valid number.";
     } else if(b > 0) {
