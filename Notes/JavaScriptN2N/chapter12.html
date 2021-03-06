@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chapter 12 Notes</title>
+</head>
+<body>
+    <header>
+        <h1>WDD 330</h1>
+        <nav>
+
+        </nav>
+    </header> 
+    <main>
+        <div class="sectionOne">
+            <h2>CHAPTER TWELVE NOTES - OBJECT ORIENTED PROGRAMMING</h2>
+        </div>
+        <div class="sectionTwo, content">
+            <h2>Chapter Summary</h2>    
+            <ul>
+                <li>Object-oriented programming (OOP) is a way of programming that uses objects that encapsulate their own properties and methods.</li>
+                <li>The main concepts of OOP are encapsulation, polymorphism and inheritance.</li>
+                <li>Constructor functions can be used to create instances of objects.</li>
+                <li>ES6 introduced class declarations that use the class keyword. These can be used in place of constructor functions.</li>
+                <li>Inside a constructor function or class declaration, the keyword this refers to the object returned by the function.</li>
+                <li>All instances of a class or constructor function inherit all the properties and methods of its prototype.</li>
+                <li>The prototype is live, so new properties and methods can be added to existing instances.</li>
+                <li>The prototype chain is used to find an available method. If an object lacks a method, JavaScript will check whether its prototype has the method. If not, it will check that function’s prototype until it finds the method or reaches the Object constructor function.</li>
+                <li>Private properties and methods can be created by defining variables using const and defining a function inside a constructor function. These can be made public using getter and setter functions.</li>
+                <li>Monkey-patching is the process of adding methods to built-in objects by augmenting their prototypes. This should be done with caution as it can cause unexpected behavior in the way built-in objects work.</li>
+                <li>A mixin method can be used to add properties and methods from other objects without creating an inheritance chain.</li>
+                <li>Methods can be chained together and called in sequence if they return a reference to this.</li>
+                <li>Polymorphism allows objects to override shared methods with a more specific implementation.</li>
+                <li>The value of this is not retained inside nested functions, which can cause errors. This can be worked around by using that = this , using the bind(this) method and using arrow functions.</li>
+                <li>Methods can be borrowed from other objects.</li>
+                <li>Composition over inheritance is a design pattern where objects are composed from 'building-block' objects, rather than inheriting all their properties and methods from a parent class.</li>
+            </ul>
+        </div>
+        <div class="sectionThree, content">
+            Object-oriented programming (OOP for short) is a style of programming that involves separating the code into objects that have properties and methods. This approach has the benefit of keeping related pieces of code encapsulated in objects that maintain state throughout the life of the program. The objects can also be reused or easily modified, as required. 
+
+            Encapsulation:  this involves keeping all the programming logic inside an object and making methods available to implement the functionality, without the outside world needing to know how it’s done.
+
+            Polymorphism: various objects can share the same method, but also have the ability to override shared methods with a more specific implementation.
+
+            Inheritance: we can take an object that already exists and inherit all its properties and methods. We can then improve on its functionality by adding new properties and methods.
+
+            Classes: Used to define a blueprint for an object.
+
+
+            <h3>Built-In Constructor Functions</h3>
+            JavaScript contains a number of built-in constructor functions such as Object , Array , and Function that can be used to create objects, arrays and functions instead of literals. By convention, the names of constructor functions or class declarations are capitalized, which is the convention used for classes in class-based programming languages.
+            The easiest way to create a new object is to use the literal syntax:
+
+            const literalObject = {};
+            << {}
+            It is also possible to use the Object constructor function:
+
+            constructedObject = new Object();
+            << {}
+            A literal is still considered to be an instance of the Object constructor:
+
+            literalObject instanceof Object;
+            << true
+            Similarly, the easiest way to create an array is to use the literal syntax, like so:
+
+            const literalArray = [1,2,3];
+            << [1, 2, 3]
+            But an alternative is to use the Array constructor function:
+
+            constructedArray = new Array(1,2,3);
+            << [1, 2, 3]
+            Array constructor functions exhibit some strange behavior regarding the arguments supplied, however. If only one argument is given, it doesn’t create an array with that argument as the first element, as you might expect. It sets the array’s length property instead, and returns an array full of undefined !
+
+            new Array(5); // you might expect [5]
+            << [undefined, undefined, undefined, undefined, undefined]
+            This results in an error being thrown if a floating point decimal number is provided as an argument, because the length of an array must be an integer:
+
+            new Array(2.5);
+            << RangeError: Invalid array length
+            This behavior is another reason why it’s recommended to always use literals to create arrays.
+
+            <h3>Prototype Property</h3>
+            When creating a class, you would normally add any default properties and methods to the class declaration. But what if you want to augment the class with extra methods and properties after it has been created? It turns out that you can still do this using the prototype property of the class. This is particularly useful if you don't have access to the class declaration, but still want to add properties and methods to the class. All classes and constructor functions have a prototype property that returns an object.
+
+            Adding prototype
+
+            Turtle.prototype.weapon = 'Hands';
+            << 'Hands'
+
+            Finding Out the Prototype
+            There are a number of ways to find the prototype of an object. One way is to go via the constructor function’s prototype property:
+
+            raph.constructor.prototype;
+            << Turtle { attack: [Function], weapon: 'Hands' }
+            Another way is to use the Object.getPrototypeOf() method, which takes the object as a parameter:
+
+            Object.getPrototypeOf(raph);
+            << Turtle { attack: [Function], weapon: 'Hands' }
+
+
+            Objects Properties VS Object Prototype Properties
+
+            Prototype properties are shared by every instance of the Turtle class. This means they’ll all have a weapon property, and it will always be the same value. 
+
+            TAKE AWAYS FROM CLASSES AND PROTOTYPES
+
+                • Create a class declaration that deals with any initialization, shared properties and methods.
+                • Any extra methods and properties that need to be augmented to the class declaration after it’s been defined can be added to the prototype. These will be added to all instances, even those that have already been created.
+                • Add any properties or methods that are individual to a particular instance can be augmented using assignment to that object (a mixin could be used to add multiple properties at once, as we’ll see later).
+                • Be careful when overwriting the prototype completely ― the constructor class needs to be reset.
+                    ○ It’s recommended to use class declarations instead of constructor functions.
+
+            <h3>Mixins</h3>
+            A mixin is a way of adding properties and methods of some objects to another object without using inheritance. It allows more complex objects to be created by ‘mixing’ basic objects together.
+
+            Basic mixin functionality is provided by the Object.assign() method. This will assign to the object provided as the first argument all of the properties from any objects provided as further arguments:
+
+            One way to think about the difference between prototypal inheritance and inheritance from mixin objects is to consider whether an object is something or whether it has something. For example, a tank is a vehicle, so it might inherit from a Vehicle prototype. The tank also has a gun, so this functionality could be added using a gun mixin object. This gives us extra flexibility, since other objects might also use a gun, but not be a vehicle, such as a soldier object, for example. The soldier object might inherit from a Human prototype and also have the gun mixin.
+
+
+        </div>
+    </main>
+    <footer>
+        <div>
+            AMBER GNEITING
+        </div>
+    </footer>
+</body>
+</html>

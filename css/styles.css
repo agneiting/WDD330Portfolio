@@ -2,8 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  text-align: center;
-  align-items: center;
 }
 
 html {
@@ -15,6 +13,8 @@ header {
   background-color: #F58300;
   color: #023047;
   font-size: 1.5em;
+  text-align: center;
+  align-items: center;
 }
 
 footer {
@@ -25,7 +25,6 @@ footer {
   font-family: "Saira Condensed", sans-serif;
   height: 3em;
   width: 100%;
-  position: fixed;
   left: 0;
   bottom: 0;
 }
@@ -33,6 +32,8 @@ footer {
 .sectionOne h2 {
   padding: 1em;
   font-size: 2em;
+  text-align: center;
+  align-items: center;
 }
 
 main {
@@ -48,9 +49,11 @@ ol {
   display: flex;
   flex-direction: column;
   padding: 1em 0 1em 0;
+  text-align: center;
+  align-items: center;
 }
 
-li {
+#toc > li {
   list-style: none;
   background-color: #023047;
   border: 2px solid #97DCED;
@@ -70,7 +73,22 @@ a {
   padding-top: 0.25em;
 }
 
-li:hover {
+div.content {
+  margin: 0em 2em 2em 2em;
+  text-align: left;
+}
+
+.content > ul {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+h2, h3, h4 {
+  margin-top: 1em;
+}
+
+#toc > li:hover {
   background-color: #97DCED;
   color: #023047;
 }

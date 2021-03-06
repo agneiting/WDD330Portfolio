@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Challenge 1: Todo</title>
+</head>
+<body>
+    <header>
+        <h1>TO-DO LIST</h1>
+    </header> 
+    <main>  
+        <div class="containerOne">
+            <ul class="list">
+                <!--List will go here.
+                    <div class="item">
+                        <li>
+                            <input type="Checkbox" class="itemCheckbox">
+                            <label class="itemLabel"></label>
+                            <button class="itemDelete">
+                                <i class="trash-alt"></i>
+                            </button>
+                        </li>
+                    </div>
+                -->
+            </ul>
+            <div class="filters">
+                <span>Count</span>
+                <button id="allF">All</button>
+                <button id="activeF">Active</button>
+                <button id="completeF">Completed</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <form>
+            <input type="text" id="content">
+            <button class="addButton" type="submit">
+                <i class="fas fa-plus"></i>
+            </button>
+        </form>
+    </footer>   
+</body>
+<script src="js/main.js"></script>
+</html>

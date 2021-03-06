@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chapter 03 Notes</title>
+</head>
+<body>
+    <header>
+        <h1>WDD 330</h1>
+        <nav>
+
+        </nav>
+    </header> 
+    <main>
+        <div class="sectionOne">
+            <h2>CHAPTER THREE NOTES - ARRAYS, LOGIC, & LOOPS</h2>
+        </div>
+        <div class="sectionTwo, content">
+            Arrays
+Create an array literal:
+	const arrayName = [];
+	const arrayName= ['first item', 'second item', 'third item'];
+	
+Add value to array:
+	arrayName[0] = 'first item';
+	
+Remove value from array:
+	delete arrayName[0];
+	
+See array:
+	arrayName;
+	
+Pop - Remove last item from array:
+	arrayName.pop();
+
+Shift - Remove first item from array:
+	arrayName.shift();
+
+Push - Add new value to end of array:
+	arrayName.push('new item');
+
+Unshift - Add new value to beginning of array:
+	arrayName.unshift('new item');
+	
+
+When you sort an array of numbers, it will sort it alphabetically, so you have to use a callback to sort numerically.
+
+Sets
+Like an array but cannot include any duplicate values.
+
+Memory Leak: Occurs when a program retains references to values that can no longer be accessed in its memory. This means that memory is being used to store values that are no longer required by the program, effectively wasting system resources. This causes to program to run more slowly.
+
+Maps
+Similar to objects but unlike objects, 
+	• they can use any data type as a key.
+	• You can find the number of key-value pairs by using the "Size" property.
+	• Maps focus solely on the storage and retrieval of key-value pairs.
+	• You can't access the value directly, and must use the get() method.
+
+Logic
+If Statements
+	if (condition) {// code to run if condition is true}
+	
+Else Statements
+	if (condition) {// code to run if condition is true} else {// code to run if condition is false}
+
+Ternary Operator: shorthand if else statement
+	condition ? (//code to run if condition is true) : (//code to run if condition is false)
+
+Switch Statements
+	switch(expression) {
+	  case x:
+	    // code block
+	    break;
+	  case y:
+	    // code block
+	    break;
+	  default:
+	    // code block
+	}
+	
+While Loop
+	while (condition) {// do something}
+	
+Do…While Loop
+	do {    do something} while(condition)
+	
+For Loop
+	for (initialization ; condition ; after) { do something }
+
+    Nested For Loop
+	produces a multiplication table up to 12 x 12: 
+for(let i=1 ; j<13 ; i++){for(let i=1 ; j<13 ; j++){    console.log(`${j} multiplied by ${i} is ${i*j}`);    }}  
+        </div>
+        <div class="sectionThree, content">
+            Chapter Summary
+	        Arrays are an ordered list of values
+	        Multidimensional arrays are arrays that contain other arrays
+	        Arrays have lots of methods that can be used to manipulate items in the array
+	        Sets are new in ES6 and are ordered lists of non-duplicate values
+	        Maps are new in ES6 and are ordered lists of key-value pairs
+	        We can use an if and else statement to control the flow of code
+	        The switch statement can be used instead of multiple if and else statements
+	        A while loop and do ... while loop can be used to repeat a block of code while a condition is still true
+	        A for loop works in a similar way to a while loop, but has a different syntax
+	        A for-of loop can be used to iterate over an array
+	        Sets and maps are enumerable, so can also be looped over using a for-of loop
+
+            Questions
+	        Destructuring array's is a little fuzzy. The "You can read more about destructuring in this article." is a broken link.
+	        When would you use an array vs a set?
+            What is a real world example for using a Map?    
+        </div>
+    </main>
+    <footer>
+        <div>
+            AMBER GNEITING
+        </div>
+    </footer>
+</body>
+</html>

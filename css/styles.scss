@@ -13,8 +13,7 @@ $headingFont: 'Open Sans', sans-serif;
 * {
     margin: 0;
     padding: 0;
-    text-align: center;
-    align-items: center;
+
 }
 html {
     background-color: $tertiaryAccent;
@@ -24,6 +23,8 @@ header {
     background-color: $secondayColor;
     color: $primaryColor;
     font-size: 1.5em;
+    text-align: center;
+    align-items: center;
 }
 footer {
     display: flex;
@@ -33,14 +34,14 @@ footer {
     font-family: $bodyFont;
     height: 3em;
     width: 100%;
-    position: fixed;
     left: 0;
     bottom: 0;
-
 }
 .sectionOne h2 {
     padding: 1em;
     font-size: 2em;
+    text-align: center;
+    align-items: center;
 }
 main {
     font-family: $bodyFont;
@@ -53,8 +54,10 @@ ol {
     display: flex;
     flex-direction: column;
     padding: 1em 0 1em 0;
+    text-align: center;
+    align-items: center;
 }
-li {
+#toc>li {
     list-style: none;
     background-color: $primaryColor;
     border: 2px solid $primaryAccent;
@@ -72,11 +75,21 @@ a {
     height: 100%;
     padding-top: .25em;
 }
-
-
+div.content {
+    margin: 0em 2em 2em 2em;
+    text-align: left;
+}
+.content>ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+h2, h3, h4{
+    margin-top: 1em;
+}
 
 //PSUEDO CLASSES
-li:hover {
+#toc>li:hover {
     background-color: $primaryAccent;
     color: $primaryColor;
 }

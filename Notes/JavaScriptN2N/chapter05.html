@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chapter 05 Notes</title>
+</head>
+<body>
+    <header>
+        <h1>WDD 330</h1>
+        <nav>
+
+        </nav>
+    </header> 
+    <main>
+        <div class="sectionOne">
+            <h2>CHAPTER FIVE NOTES - OBJECTS</h2>
+        </div>
+        <div class="sectionTwo, content">
+
+        </div>
+        <div class="sectionThree, content">
+            <h2>Chapter Summary</h2>
+                <ul>
+                    <li>Objects are a collection of key-value pairs placed inside curly braces {}.</li>
+                    <li>Objects have properties that can be any JavaScript value. If it’s a function, it’s known as a method.</li>
+                    <li>An object’s properties and methods can be accessed using either dot notation or square bracket notation.</li>
+                    <li>Objects are mutable, which means their properties and methods can be changed or removed.</li>
+                    <li>Objects can be used as parameters to functions, which allows arguments to be entered in any order, or omitted.</li>
+                    <li>Nested objects can be created by placing objects inside objects.</li>
+                    <li>JSON is a portable data format that uses JavaScript object literals to exchange information.</li>
+                    <li>The Math object gives access to a number of mathematical constants.</li>
+                    <li>The Math object can be used to perform mathematical calculations.</li>
+                    <li>The Date object can be used to create date objects.</li>
+                    <li>Once you’ve created a Date object, you can use the getter methods to access information about that date.</li>
+                    <li>Once you’ve created a Date object, setter methods can be used to change information about that date.</li>
+                    <li>The Regex object can be used to create regular expressions.</li>
+                </ul>
+            <h2>Questions</h2>
+                <ul>
+                    <li>Is there a difference between objects and object literals?</li>
+                </ul>
+            <h3>Object Literals</h3>
+
+            An object in JavaScript is a self-contained set of related values and functions. They act as a collection of named properties that map to any JavaScript value such as strings, numbers, booleans, arrays and functions. If a property’s value is a function, it is known as a method.
+            
+            Here is an example of an object literal that describes the Man of Steel:
+            
+                const superman = {
+                    name: 'Superman',
+                    'real name': 'Clark Kent',
+                    height: 75,
+                    weight: 235,
+                    hero: true,
+                    villain: false,
+                    allies: ['Batman','Supergirl','Superboy'],
+                    fly() {
+                        return 'Up, up and away!';
+                    }
+                };
+            
+            Create an object
+                const spiderman = {};
+                OR
+                const spiderman = new Object();
+                
+            Add properties
+                superman.city = 'Metropolis';
+                << 'Metropolis'
+                
+            Delete Properties
+                delete superman.fly
+                << true
+                
+            Nest Object
+                jla.wonderWoman.realName
+                << "Diana Prince"
+                OR
+                jla['flash']['realName']
+                << "Barry Allen"
+                OR
+                jla.aquaman['realName']
+                << "Arthur Curry"
+                
+            Access Properties
+                superman.name
+                << 'Superman'
+                OR
+                superman['name']
+                << 'Superman'
+                OR
+                superman["real" + " " + "name"] // the property is built using string concatenation
+                << "Clark Kent"
+                
+            Call Method
+                superman.fly()
+                << 'Up, up and away!'
+                OR
+                superman['fly']()
+                << 'Up, up and away!'
+            
+            Finding all properties of an Object
+                for(const key in superman) {
+                    console.log(key + ": " + superman[key]);
+                }
+                << "name: Superman"
+                << "real name: Clark Kent"
+                << "height: 75"
+                << "weight: 235"
+                << "hero: true"
+                << "villain: false"
+                << "allies: Batman,Supergirl,Superboy"
+                << "fly: function (){
+                    console.log(\"Up, up and away!\");
+                }"
+                
+            Objects as parameters to functions
+                greet({ greeting: `What's up dude`, age: 10, name: `Bart` });
+                << 'What\'s up dude! My name is Bart and I am 10 years old.'
+                
+            The Epoch is 1st January 1970. This is an arbitrary date that is used in programming as a reference point in time from which to measure dates. 
+            
+            UTC is the primary time standard by which the world regulates clocks. It was formalized in 1960 and is much the same as Greenwich Mean Time (GMT). The main difference is that UTC is a standard that is defined by the scientific community, unlike GMT.
+            
+            <h3>Getter Methods</h3>
+            The properties of date objects are unable to be viewed or changed directly. Instead, they have a number of methods known as getter methods, which return information about the date object, such as the month and year.
+            <h3>Setter Methods</h3>
+            Most of the getter methods covered in the previous section have equivalent setter methods. These are methods that can be used to change the value of the date held in a Date object. Each of the methods takes an argument representing the value to which you update the date. The methods return the timestamp of the updated date object.
+            
+            <h3>The RegExp Object</h3>
+            A regular expression (or RegExp, for short) is a pattern that can be used to search strings for matches to the pattern. A common use is 'find and replace' type operations. For example, say you were looking for any word ending in 'ing', you could use the regular expression /[a-zA-Z]+ing$/ .
+            
+            Regular expressions are objects, and have the following properties:
+            
+                • The <strong>global</strong> property makes the pattern return all matches. By default, the pattern only looks for the first occurrence of a match.
+            
+                • The <strong>ignoreCase</strong> property makes the pattern case-insensitive. By default, they are case sensitive.
+            
+                • The <strong>multiline</strong> property makes the pattern multiline. By default, a pattern will stop at the end of a line.
+            
+            The following flags can be placed after a regular expression literal to change the default properties:
+            
+                •  g sets the <strong>global</strong> property to true
+            
+                •  i sets the <strong>ignoreCase</strong> property to true
+            
+                •  m sets the <strong>multiline</strong> property to true
+                
+        </div>
+    </main>
+    <footer>
+        <div>
+            AMBER GNEITING
+        </div>
+    </footer>
+</body>
+</html>

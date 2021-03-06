@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chapter 06 Notes</title>
+</head>
+<body>
+    <header>
+        <h1>WDD 330</h1>
+        <nav>
+
+        </nav>
+    </header> 
+    <main>
+        <div class="sectionOne">
+            <h2>CHAPTER SIX NOTES - DOCUMENT OBJECT MODEL</h2>
+        </div>
+        <div class="sectionTwo, content">
+            <h2>Chapter Summary</h2>
+                <ul>
+                    <li>The Document Object Model is a way of representing a page of HTML as a tree of nodes.</li>
+                    <li>The document.getElementById() , document.getElementsByClassName() , document.getElementsByTagNames() and document.querySelector() can be used to access elements on a page.</li>
+                    <li>The parentNode() , previousSibling() , nextSibling() , childNodes() and children() methods can be used to navigate around the DOM tree.</li>
+                    <li>An element’s attributes can be accessed using the getAttribute() method, and updated using the setAttribute() method.</li>
+                    <li>The createElement() and createTextNode() methods can be used to create dynamic markup on the fly.</li>
+                    <li>Markup can be added to the page using the appendChild() and insertBefore() methods.</li>
+                    <li>Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.</li>
+                    <li>The innerHTML property can be used to insert raw HTML directly into the DOM.</li>
+                    <li>The CSS properties of an element can be changed by accessing the style property.</li>
+                </ul>
+            <h2>Questions</h2>
+                <ul>
+                    <li>What is a real world example of checking style properties?</li>
+                </ul>
+        </div>
+        <div class="sectionThree, content">
+            The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure.
+
+            The DOM treats everything on a web page as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. The HTML tag is the root node, and every other part of the document is a child node of this.
+
+            <h3>Console Shortcuts</h3>
+            Here are a couple of useful shortcuts that will help speed things up when you're using the console:
+                • Pressing TAB will autocomplete any methods and should show you a list of possible methods
+                • Pressing the UP arrow key will select the previous command entered.
+
+            <h3>Be Careful Updating className</h3>
+            Changing the className property of an element by assignment will overwrite all other classes that have already been set on the element. This problem can be avoided by using the classList property instead.
+        </div>
+    </main>
+    <footer>
+        <div>
+            AMBER GNEITING
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chapter 08 Notes</title>
+</head>
+<body>
+    <header>
+        <h1>WDD 330</h1>
+        <nav>
+
+        </nav>
+    </header> 
+    <main>
+        <div class="sectionOne">
+            <h2>CHAPTER EIGHT NOTES - FORMS</h2>
+        </div>
+        <div class="sectionTwo, content">
+            <h2>Chapter Summary</h2>
+                <ul>
+                    <li>Forms are the primary method used for entering data into a browser.</li>
+                    <li>Forms have a variety of controls that are used for entering different types of information.</li>
+                    <li>HTML5 has a large number of new input types that are beginning to be implemented in modern browsers.</li>
+                    <li>document.forms will return an HTML collection of all the forms on a page.</li>
+                    <li>form.elements will return an HTML collection of all the elements contained within a form.</li>
+                    <li>Forms have focus , blur , and change events that fire as a user interacts with the form.</li>
+                    <li>Forms also have a submit event that can be used to intercept a form before it’s been submitted.</li>
+                    <li>The information entered into a form can be read or updated using the value property of the form controls.</li>
+                    <li>The HTML5 form validation API can be used to automatically validate a form, but only at a basic level, so a custom validation script may be required.</li>
+                </ul>
+        </div>
+        <div class="sectionThree, content">
+            <h3>Form UX</h3>
+            If you'd like to learn more about how to design forms that are accessible and enhance the user experience then Designing UX: Forms by Jessica Enders is well worth a read.
+
+            <h3>Form Properties and Methods</h3>
+            form.submit()
+            form.reset() *
+            form.action - used to set the action attribute of a form, so it’s sent to a different URL to be processed on the server
+
+            *Reset buttons are generally considered poor for usability, as they are too easy to click and then wipe out all the data that’s been entered. So think very carefully before using one in a form.
+
+            <h3>Form Controls</h3>
+            Common types:
+                Input - text, passwords, check boxes, radio buttons, file uploads.
+                Select - menus for drop down lists of options
+                Textarea - longer text entry
+                Button - submitting and resetting forms.
+            New attributes:
+                Autofocus - gives focues to this element when a page loads.
+                Placeholder - insert the value provided in the input field until the user enters some text. This can be useful to place hints about how to fill in the form.
+                Maxlength -  limit the number of characters that can be entered in the field
+
+            <h3>Form Validation</h3>
+            Examples:
+                A required field is completed
+                An email address is valid
+                A number is entered when numerical data is required
+                A password is at least a minimum number of characters
+
+            const label = form.querySelector('label');
+            const error = document.createElement('div');
+            error.classList.add('error');
+            error.textContent = '! Your name is not allowed to start with X.';
+            label.append(error);
+
+            function validateInline() {
+                const heroName = this.value.toUpperCase();
+                if(heroName.startsWith('X')){
+                error.style.display = 'block';
+                } else {
+                error.style.display = 'none';
+                }
+            }
+
+            You can also disable the form by adding "disabled" attribute to the input element. This is useful if there is an error on the form.
+        </div>
+    </main>
+    <footer>
+        <div>
+            AMBER GNEITING
+        </div>
+    </footer>
+</body>
+</html>

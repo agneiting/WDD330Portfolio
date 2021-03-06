@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chapter 07 Notes</title>
+</head>
+<body>
+    <header>
+        <h1>WDD 330</h1>
+        <nav>
+
+        </nav>
+    </header> 
+    <main>
+        <div class="sectionOne">
+            <h2>CHAPTER SEVEN NOTES - EVENTS</h2>
+        </div>
+        <div class="sectionTwo, content">
+            <h2>Chapter Summary</h2>
+                <ul>
+                    <li>Events occur when a user interacts with a web page.</li>
+                    <li>An event listener is attached to an element, then invokes a callback function when the event occurs.</li>
+                    <li>The event object is passed to the callback function as an argument, and contains lots of properties and methods relating to the event.</li>
+                    <li>There are many types of event, including mouse events, keyboard events, and touch events.</li>
+                    <li>You can remove an event using the removeEventListener method.</li>
+                    <li>The default behavior of elements can be prevented using the preventDefault() function.</li>
+                    <li>Event propagation is the order the events fire on each element.</li>
+                    <li>Event delegation is when an event listener is added to a parent element to capture events that happen to its children elements.</li>
+                </ul>
+            <h2>Questions</h2>
+                <ul>
+                    <li>Does mousedown and mouseup mean moving the mouse up or down, or clicking the mouse and the clicker goes down and then up. These both occur before a click event is fired.</li>
+                </ul>
+        </div>
+        <div class="sectionThree, content">
+            Whenever an event handler is triggered by an event, the callback function is called. This function is automatically passed an event object as a parameter that contains information about the event.
+
+            <h3>Parameter Naming</h3>
+            The parameter does not have to be called event . It can be given any legal variable name, although calling it event can make it easier to read the code. Many developers often abbreviate it to just e .
+
+            You can see a full list on the Events page of the Mozilla Developer Network.
+
+            <h3>Using click and doubleclick On The Same Element</h3>
+            You should be very cautious of attaching both a click and doubleclick event to the same element. This is because it’s impossible to tell if a click is the first click of a doubleclick or just a single click. This means that a doubleclick event willalwayscause the click event to fire.
+
+            <h3>Using the touchstart Event</h3>
+            Be careful when using the touchstart event as it fires as soon as a user touches the screen. They may be touching the screen because they want to zoom in or swipe, and a touchstart event listener could prevent them from doing this.
+            The click event is often a much safer option as it still fires when the screen is touched, but there’s a slight delay of 300ms, allowing the user time to perform another action with the device. The click event can be thought of as a "tap" in the context of a touch event.
+
+        </div>
+    </main>
+    <footer>
+        <div>
+            AMBER GNEITING
+        </div>
+    </footer>
+</body>
+</html>
