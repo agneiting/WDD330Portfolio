@@ -8,26 +8,43 @@ body {
     background-color: rgb(241, 91, 116);
     color: white;
 }
-
-form, .containerOne {
+main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
 }
 
-form input, form button, .containerOne button {
+ul {
+    list-style-type: none;;
+}
+
+li {
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    color: black;
+}
+
+li input {
+    margin: 20px;
+}
+
+form input, form button, .list button {
     padding: 1rem;
     font-size: 2rem;
     border: none;
 }
 
-form button, .containerOne button {
+form button, .list button {
     background: white;
     color: rgb(241, 91, 116);
     cursor: pointer;
     transition: all 0.3s ease;
 }
-form button:hover, .containerOne button:hover {
+
+form button:hover, .list button:hover {
     background: pink;
     color: white;
 }

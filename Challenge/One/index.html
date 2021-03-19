@@ -13,36 +13,28 @@
         <h1>TO-DO LIST</h1>
     </header> 
     <main>  
-        <div class="containerOne">
-            <ul class="list">
-                <!--List will go here.
-                    <div class="item">
-                        <li>
-                            <input type="Checkbox" class="itemCheckbox">
-                            <label class="itemLabel"></label>
-                            <button class="itemDelete">
-                                <i class="trash-alt"></i>
-                            </button>
-                        </li>
-                    </div>
-                -->
-            </ul>
-            <div class="filters">
-                <span>Count</span>
-                <button id="allF">All</button>
-                <button id="activeF">Active</button>
-                <button id="completeF">Completed</button>
-            </div>
-        </div>
-    </main>
-    <footer>
         <form>
             <input type="text" id="content">
-            <button class="addButton" type="submit">
+            <button id="addButton" type="submit">
                 <i class="fas fa-plus"></i>
             </button>
         </form>
+        <div class="filters">
+            <span id="tasksLeft"></span>
+            <button id="allF">All</button>
+            <button id="activeF">Active</button>
+            <button id="completeF">Completed</button>
+        </div>
+        <div class="list">
+            <ul>
+                <!--List will go here.
+ 
+                -->
+            </ul>
+        </div>
+    </main>
+    <footer>
     </footer>   
 </body>
-<script src="js/main.js"></script>
+<script type="module" src="js/main.js"></script>
 </html>
