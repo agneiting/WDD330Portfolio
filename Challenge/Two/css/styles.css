@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", serif;
+}
+
+.page {
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif;
+}
+
+#home {
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1c93a0;
+}
+#home h1 {
+  font-size: 65px;
+  padding: 2em 0 0.5rem 0;
+}
+#home button {
+  background-color: white;
+  color: #084C61;
+  font-family: "Open Sans", serif;
+  font-size: 1.5em;
+  height: 3em;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+#word {
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1c93a0;
+}
+#word p {
+  font-size: 3em;
+  padding: 4em 0 0.5rem 0;
+}
+#word span {
+  flex-direction: row;
+}
+#word input {
+  background-color: white;
+  color: #323031;
+  font-family: "Open Sans", serif;
+  font-size: 1.5em;
+  height: 2em;
+  width: 19rem;
+  padding: 0.5em;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+#word button {
+  background-color: white;
+  color: #084C61;
+  height: 3em;
+  font-family: "Open Sans", serif;
+  font-size: 1.5em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+#win {
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(#FFC857, #EC7357);
+}
+#win h1 {
+  font-size: 65px;
+  padding: 2em 0 0.5rem 0;
+}
+#win button {
+  background-color: #084C61;
+  color: white;
+  font-family: "Open Sans", serif;
+  font-size: 1.5em;
+  height: 3em;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: none;
+  border-radius: 2px;
+}
+
+#lose {
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1c93a0;
+}
+#lose h1 {
+  font-size: 65px;
+  padding: 2em 0 0.5rem 0;
+}
+#lose button {
+  background-color: #084C61;
+  color: white;
+  font-family: "Open Sans", serif;
+  font-size: 1.5em;
+  height: 3em;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border: none;
+  border-radius: 2px;
+}
+
+#play {
+  background-color: #1c93a0;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+}
+#play .playWord {
+  height: 90px;
+}
+#play img {
+  width: 400px;
+  height: auto;
+}
+#play button {
+  background-color: white;
+  color: #323031;
+  font-family: "Open Sans", serif;
+  font-size: 1.5em;
+  height: 2.5em;
+  width: 2.5em;
+  padding: 0 0 1.5px 0;
+  border: none;
+  border-radius: 2px;
+  justify-items: center;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+#play .keyboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 0.5em;
+  grid-column-gap: 0.5em;
+  justify-items: center;
+}
+#play .stage {
+  display: none;
+}
+#play .currentStage {
+  display: flex;
+}
+
+#home button:link {
+  color: #1c93a0;
+}
+
+#home button:visited {
+  color: #084C61;
+}
+
+#home button:hover {
+  color: #323031;
+  background-color: #c5c5c5;
+}
+
+#play button:hover {
+  color: white;
+  background-color: #084C61;
+}
+
+#word button:hover {
+  color: white;
+  background-color: #084C61;
+}
+
+/*# sourceMappingURL=styles.css.map */

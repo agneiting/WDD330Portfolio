@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans&display=swap');
+
+//Variables
+$lightBlue: #1c93a0;
+$darkBlue: #084C61;
+$salmon: #EC7357;
+$yellow: #FFC857;
+$black: #323031;
+$lightGrey: rgb(197, 197, 197);
+
+$headingFont: 'Lato', sans-serif;
+$bodyFont: 'Open Sans', serif;
+
+//Styles
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $bodyFont;
+}
+.page {
+    display: none;
+}
+.active {
+    display: flex;
+    flex-direction: column;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headingFont;
+}
+#home {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: $lightBlue;
+    h1 {
+        font-size: 65px;
+        padding: 2em 0 .5rem 0;
+    }
+    button {
+        background-color: white;
+        color: $darkBlue;
+        font-family: $bodyFont;
+        font-size: 1.5em;
+        height: 3em;
+        margin: .5em 0;
+        padding: .5em;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+}
+#word {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: $lightBlue;
+    p {
+        font-size: 3em;
+        padding: 4em 0 .5rem 0;
+    }
+    span {
+        flex-direction: row;
+    }
+    input {
+        background-color: white;
+        color: $black;
+        font-family: $bodyFont;
+        font-size: 1.5em;
+        height: 2em;
+        width: 19rem;
+        padding: .5em;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    button {
+        background-color: white;
+        color: $darkBlue;
+        height: 3em;
+        font-family: $bodyFont;
+        font-size: 1.5em;
+        padding: .5em;
+        border: none;
+        border-radius: 2px; 
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+}
+#win {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient($yellow, $salmon);
+    h1 {
+        font-size: 65px;
+        padding: 2em 0 .5rem 0;
+    }
+    button {
+        background-color: $darkBlue;
+        color: white;
+        font-family: $bodyFont;
+        font-size: 1.5em;
+        height: 3em;
+        margin: .5em 0;
+        padding: .5em;
+        border: none;
+        border-radius: 2px;
+    }
+}
+#lose {
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: $lightBlue;
+    h1 {
+        font-size: 65px;
+        padding: 2em 0 .5rem 0;
+    }
+    button {
+        background-color: $darkBlue;
+        color: white;
+        font-family: $bodyFont;
+        font-size: 1.5em;
+        height: 3em;
+        margin: .5em 0;
+        padding: .5em;
+        border: none;
+        border-radius: 2px;
+    }
+}
+#play {
+    background-color: $lightBlue;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    .playWord {
+        height: 90px;
+    }
+    img {
+        width: 400px;
+        height: auto;
+        ;
+    }
+    button {
+        background-color: white;
+        color: $black;
+        font-family: $bodyFont;
+        font-size: 1.5em;
+        height: 2.5em;
+        width: 2.5em;
+        padding: 0 0 1.5px 0;
+        border: none;
+        border-radius: 2px;
+        justify-items: center;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+    .keyboard{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-row-gap: .5em;
+        grid-column-gap: .5em;
+        justify-items: center;
+    }
+    .stage {
+        display: none;
+    }
+    .currentStage {
+        display: flex;
+    }
+}
+
+//BUTTON PSUEDO CLASSES
+//unvisited link
+#home button:link {
+    color: $lightBlue;
+}
+  
+//visited link
+#home button:visited {
+    color: $darkBlue;
+}
+
+//mouse over link
+#home button:hover {
+    color: $black;
+    background-color: $lightGrey;
+}
+#play button:hover {
+    color: white;
+    background-color: $darkBlue;
+}
+#word button:hover {
+    color: white;
+    background-color: $darkBlue;
+}
