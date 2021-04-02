@@ -10,15 +10,26 @@ export function screenSwitch(currentP, nextP) {
 
 //This will find the length of the word.
 export function findLength(x) {
-const inputWord = x;
-const wordLength = inputWord.length;
-console.log(wordLength);
+    const word = x;
+    const wordLength = word.length;
+    console.log(wordLength);
+    return wordLength;
 };
 
+//creates element for each letter in word
+export function createWordElements(l) {
+    const length = l;
+    for (var i =0; i < length; i++) {
+    //I LEFT OFF HERE AMBER OVER HERE!!!!!!! I NEED TO ADD ELEMENTS FOR EACH LETTER    
+    }
+    
+}
+
 //Turn clicked alphabet letter to transparent
-export function transparentAlphabet(x) {
+export function changeAlphabet(x) {
     const letter = x;
-    document.getElementById(letter).style.background = "#808080"; 
-    document.getElementById(letter).style.color = "#000000";
-    document.getElementById("letter").disabled = true; 
+    document.getElementById(letter).style.background = "rgba(0, 0, 0, 0.26)";
+    document.getElementById(letter).style.color = "black"; 
+    document.getElementById(letter).style.cursor = "default";
+    document.getElementById(letter).disabled = true; 
 }
