@@ -3,7 +3,7 @@ var toc = document.getElementById("toc");
 
 //Create Array
 let contents = [
-    ['Challenge #1', '/WDD330Portfolio/Challenge/One/index.html'],
+    ['Challenge #1', 'Challenge/One/index.html'],
     ['Challenge #2', '/WDD330Portfolio/Challenge/Two/index.html'],
     ['W02 Team Activity', '/WDD330Portfolio/Team/w02/index.html'],
     ['W03 Team Activity', '/WDD330Portfolio/Team/w03/index.html'],
@@ -11,7 +11,7 @@ let contents = [
     ['W05 Team Activity', '/WDD330Portfolio/Team/w05/index.html'],
     ['W07 Team Activity', '/WDD330Portfolio/Team/w07/index.html'],
     ['W08 Team Activity', '/WDD330Portfolio/Team/w08/index.html'],
-    ['W09 Team Activity', '/WDD330Portfolio/Team/w09/index-start.html'],
+    ['W09 Team Activity', '/WDD330Portfolio/Team/w09/index-START.html'],
     ['N2N Chapter 2 Notes', '/WDD330Portfolio/Notes/JavascriptN2N/chapter02.html'],
     ['N2N Chapter 3 Notes', '/WDD330Portfolio/Notes/JavascriptN2N/chapter03.html'],
     ['N2N Chapter 4 Notes', '/WDD330Portfolio/Notes/JavascriptN2N/chapter04.html'],
