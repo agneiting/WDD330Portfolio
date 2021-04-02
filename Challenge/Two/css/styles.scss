@@ -182,16 +182,14 @@ h1, h2, h3, h4, h5, h6 {
 #home button:link {
     color: $lightBlue;
 }
-  
 //visited link
 #home button:visited {
     color: $darkBlue;
 }
-
 //mouse over link
 #home button:hover {
-    color: $black;
-    background-color: $lightGrey;
+    color: white;
+    background-color: $darkBlue;
 }
 #play button:hover {
     color: white;
@@ -200,4 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 #word button:hover {
     color: white;
     background-color: $darkBlue;
+}
+#word input:focus {
+    outline: none;
 }

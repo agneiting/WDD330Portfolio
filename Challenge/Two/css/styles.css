@@ -180,8 +180,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #home button:hover {
-  color: #323031;
-  background-color: #c5c5c5;
+  color: white;
+  background-color: #084C61;
 }
 
 #play button:hover {
@@ -192,6 +192,10 @@ h1, h2, h3, h4, h5, h6 {
 #word button:hover {
   color: white;
   background-color: #084C61;
+}
+
+#word input:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
