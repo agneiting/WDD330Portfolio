@@ -4,6 +4,7 @@ var toc = document.getElementById("toc");
 //Create Array
 let contents = [
     ['Challenge #1', '/challenge/one/index.html'],
+    ['Challenge #2', '/challenge/two/index.html'],
     ['W02 Team Activity', '/Team/w02/index.html'],
     ['W03 Team Activity', '/Team/w03/index.html'],
     ['W04 Team Activity', '/Team/w04/index.html'],
