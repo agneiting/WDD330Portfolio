@@ -33,10 +33,12 @@ document.getElementById("addWord").addEventListener("click", function() {
 });
 
 
-//Changes Alphabet button when clicked
+//Changes Alphabet button when clicked and sends to loser screen
+var attempt=0;
 document.querySelectorAll('.key').forEach(item => {
   item.addEventListener('click', event => {
     util.changeAlphabet(item.id);
-    console.log(item.id);
+    util.loser(attempt);
+    attempt++;
   })
 })

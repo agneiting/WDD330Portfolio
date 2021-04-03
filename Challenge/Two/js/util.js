@@ -12,7 +12,7 @@ export function screenSwitch(currentP, nextP) {
 export function findLength(x) {
     const word = x;
     const wordLength = word.length;
-    console.log(wordLength);
+    console.log("This word is " + wordLength + " letters long.");
     return wordLength;
 };
 
@@ -27,7 +27,7 @@ export function createWordElements(l, w) {
         var p = document.createElement('p'); 
         p.innerHTML = letter;
 
-        
+
         //Append
         document.getElementById('playWord').appendChild(p); 
     }
@@ -40,4 +40,23 @@ export function changeAlphabet(x) {
     document.getElementById(letter).style.color = "black"; 
     document.getElementById(letter).style.cursor = "default";
     document.getElementById(letter).disabled = true; 
+}
+
+export function loser(a) {
+    var attempt = a;
+    var currentStage = "stage" + (attempt + 1);
+    var nextStage = "stage" + (attempt + 2);
+    if (attempt < 6) {
+        //Remove active class from current page.
+        var current = document.getElementById(currentStage);
+        console.log(currentStage);
+        current.classList.remove('currentStage');
+        //Add active class to next page.
+        var next = document.getElementById(nextStage);
+        next.classList.add('currentStage'); 
+        attempt++;
+        console.log(attempt);  
+      } else {
+            screenSwitch("play", "lose");
+      }
 }
