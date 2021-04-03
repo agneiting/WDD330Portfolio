@@ -17,12 +17,20 @@ export function findLength(x) {
 };
 
 //creates element for each letter in word
-export function createWordElements(l) {
+export function createWordElements(l, w) {
     const length = l;
+    const word = w;
     for (var i =0; i < length; i++) {
-    //I LEFT OFF HERE AMBER OVER HERE!!!!!!! I NEED TO ADD ELEMENTS FOR EACH LETTER    
+        //Get the letter
+        var letter = word.charAt(i);  
+        //Create DOM elements
+        var p = document.createElement('p'); 
+        p.innerHTML = letter;
+
+        
+        //Append
+        document.getElementById('playWord').appendChild(p); 
     }
-    
 }
 
 //Turn clicked alphabet letter to transparent

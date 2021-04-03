@@ -134,8 +134,17 @@ h1, h2, h3, h4, h5, h6 {
   width: 100vw;
   align-items: center;
 }
-#play .playWord {
-  height: 90px;
+#play #playWord {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#play #playWord p {
+  text-align: center;
+  margin: 1em 0.5em 1em 0.5em;
+  width: 0.5em;
+  font-size: 30px;
+  border-bottom: 3px solid black;
 }
 #play img {
   width: 400px;
