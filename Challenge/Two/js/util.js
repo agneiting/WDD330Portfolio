@@ -46,7 +46,7 @@ export function loser(a) {
     var attempt = a;
     var currentStage = "stage" + (attempt + 1);
     var nextStage = "stage" + (attempt + 2);
-    if (attempt < 6) {
+    if (attempt < 5) {
         //Remove active class from current page.
         var current = document.getElementById(currentStage);
         console.log(currentStage);
@@ -58,5 +58,6 @@ export function loser(a) {
         console.log(attempt);  
       } else {
             screenSwitch("play", "lose");
+            console.log("else worked");
       }
 }
