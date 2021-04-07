@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Form Validation Notes</title>
+</head>
+<body>
+    <header>
+        <h1>WDD 330</h1>
+        <nav>
+
+        </nav>
+    </header> 
+    <main>
+        <div class="sectionOne">
+            <h2>Client Side Form Validation</h2>
+        </div>
+        <div class="sectionTwo, content">
+            <h3>Chapter Summary</h3>
+            Client-side form validation sometimes requires JavaScript if you want to customize styling and error messages, but it always requires you to think carefully about the user. Always remember to help your users correct the data they provide. To that end, be sure to:
+            <ul>
+	            <li>Display explicit error messages.</li>
+	            <li>Be permissive about the input format.</li>
+	            <li>Point out exactly where the error occurs, especially on large forms.</li>
+            </ul>
+            Once you have checked that the form is filled out correctly, the form can be submitted.  
+
+            If the information is correctly formatted, the application allows the data to be submitted to the server and (usually) saved in a database; if the information isn't correctly formatted, it gives the user an error message explaining what needs to be corrected, and lets them try again.
+
+            <h3>Types</h3>
+            Built-in form validation uses HTML5 form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.
+
+            JavaScript validation is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).
+
+            <h3>Examples</h3>
+            "This field is required" (You can't leave this field blank).
+            "Please enter your phone number in the format xxx-xxxx" (A specific data format is required for it to be considered valid).
+            "Please enter a valid email address" (the data you entered is not in the right format).
+            "Your password needs to be between 8 and 30 characters long and contain one uppercase letter, one symbol, and a number." (A very specific data format is required for your data).
+
+            <h3>Security</h3>
+            Client-side validation should not be considered an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the server-side as well as the client-side, because client-side validation is too easy to bypass, so malicious users can still easily send bad data through to your server. Read Website security for an idea of what could happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.
+        </div>
+        <div class="sectionThree, content">
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">Link to Article</a>
+        </div>
+        
+    </main>
+    <footer>
+        <div>
+            AMBER GNEITING
+        </div>
+    </footer>
+</body>
+</html>

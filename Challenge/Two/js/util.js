@@ -1,3 +1,5 @@
+import * as wordArray from './wordArray.js'
+
 //This will change the screen of the game
 export function screenSwitch(currentP, nextP) {
     //Remove active class from current page.
@@ -61,3 +63,24 @@ export function loser(a) {
             console.log("else worked");
       }
 }
+
+//FINAL WORD ON THE WORD
+export function getWord() {
+    var userWord = inputWord.value;
+    var randomWord = wordArray.randomWord();
+    var word = '';
+    if (userWord == '') {
+        word = randomWord;
+        console.log(word);
+    } else {
+        word = userWord;
+        console.log(word);
+    }
+    return word;
+}
+
+
+
+//export function lowerAnimation() {
+    //var animation = element.animate(keyframes, options);
+//}

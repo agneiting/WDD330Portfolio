@@ -122,11 +122,19 @@ h1, h2, h3, h4, h5, h6 {
     img {
         height: 30em;
         z-index: 0;
+        #man {
+            animation-duration: 5s;
+            animation-name: lower; 
+        }
+        .shadow {
+            height: 1px;
+        }
     }
     h1 {
         position: absolute;
         font-size: 65px;
         padding: 2em 0 .5rem 0;
+        
     }
     button {
         background-color: $darkBlue;
@@ -217,4 +225,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 #word input:focus {
     outline: none;
+}
+
+
+//KEYFRAMES
+@keyframes lower {
+    from {
+        height: 1px;
+    }
+    
+    to {
+        height: 50px;
+    }
 }

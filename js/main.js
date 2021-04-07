@@ -12,6 +12,8 @@ let contents = [
     ['W07 Team Activity', 'Team/w07/index.html'],
     ['W08 Team Activity', 'Team/w08/index.html'],
     ['W09 Team Activity', 'Team/w09/index-START.html'],
+    ['W10 Team Activity', 'Team/w10/index.html'],
+    ['W11 Team Activity', 'Team/w11/client/week11.html'],
     ['N2N Chapter 2 Notes', 'Notes/JavascriptN2N/chapter02.html'],
     ['N2N Chapter 3 Notes', 'Notes/JavascriptN2N/chapter03.html'],
     ['N2N Chapter 4 Notes', 'Notes/JavascriptN2N/chapter04.html'],
@@ -26,6 +28,8 @@ let contents = [
     ['N2N Chapter 15 Notes', 'Notes/JavascriptN2N/chapter15.html'],
     ['HTML5 Chapter 8 Notes', 'Notes/HTML5/chapter08.html'],
     ['HTML5 Chapter 12 Notes', 'Notes/HTML5/chapter12.html'],
+    ['MDN Client Side Form Validation', 'Notes/MDNWebDocs/formValidation.html'],
+    ['MDN Using Fetch', 'Notes/MDNWebDocs/fetch.html'],
 ];
 
 //Read list of links from array and call function 

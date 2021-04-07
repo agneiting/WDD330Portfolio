@@ -118,6 +118,13 @@ h1, h2, h3, h4, h5, h6 {
   height: 30em;
   z-index: 0;
 }
+#lose img #man {
+  animation-duration: 5s;
+  animation-name: lower;
+}
+#lose img .shadow {
+  height: 1px;
+}
 #lose h1 {
   position: absolute;
   font-size: 65px;
@@ -213,6 +220,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #word input:focus {
   outline: none;
+}
+
+@keyframes lower {
+  from {
+    height: 1px;
+  }
+  to {
+    height: 50px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
